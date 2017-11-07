@@ -1,0 +1,104 @@
+---
+
+# http://editor.swagger.io/
+
+swagger: "2.0"
+info:
+  version: 1.0.0
+  title: Testapi
+host: "localhost:3000"
+basePath: /testapi
+
+paths:
+
+  # Database
+
+  /database:
+    delete:
+      description: Truncate database tables
+      responses:
+        "200": {description: OK}
+
+  # Factories
+
+  /factories/{factory}:
+    parameters:
+      -
+        name: factory
+        in: path
+        required: true
+        type: string
+
+    post:
+      description: Create an objet using a factory
+      parameters:
+       -
+        name: attributes[...]
+        in: body
+        schema: {}
+      responses:
+        "200": {description: OK}
+        "422": {description: Erreur}
+
+  # Models
+
+  /models/{model}:
+    parameters:
+      -
+        name: model
+        in: path
+        required: true
+        type: string
+
+    get:
+      description: List objects
+      responses:
+        "200": {description: OK}
+        "422": {description: Erreur}
+
+    post:
+      description: Create object
+      parameters:
+       -
+        name: attributes[...]
+        in: body
+        schema: {}
+      responses:
+        "200": {description: OK}
+        "422": {description: Erreur}
+
+  /models/{model}/{id}:
+    parameters:
+      -
+        name: model
+        in: path
+        required: true
+        type: string
+      -
+        name: id
+        in: path
+        required: true
+        type: string
+
+    get:
+      description: Get object
+      responses:
+        "200": {description: OK}
+        "422": {description: Erreur}
+
+    patch:
+      description: Update object
+      parameters:
+       -
+        name: attributes[...]
+        in: body
+        schema: {}
+      responses:
+        "200": {description: OK}
+        "422": {description: Erreur}
+
+    delete:
+      description: Destroy object
+      responses:
+        "200": {description: OK}
+        "422": {description: Erreur}
