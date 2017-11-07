@@ -1,5 +1,5 @@
-require "testapi/engine"
-
 module Testapi
-  # Your code goes here...
 end
+
+require "testapi/engine"
+require "testapi/config"
