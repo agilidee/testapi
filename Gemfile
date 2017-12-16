@@ -19,5 +19,5 @@ group :development, :test do
   gem "byebug"
   gem "rspec-rails"
   gem "shoulda-matchers"
-  gem "rubocop", ">= 0.51.0"
+  gem "rubocop", "~> 0.52.0", require: false
 end
