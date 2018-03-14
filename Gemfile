@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 gemspec
 
-gem "rails", "~> 5.1.4"
+gem "rails", "~> 5.1.5"
 gem "awesome_print"
 gem "pry-rails"
 gem "sqlite3"
@@ -19,5 +19,5 @@ group :development, :test do
   gem "byebug"
   gem "rspec-rails"
   gem "shoulda-matchers"
-  gem "rubocop", "~> 0.52.0", require: false
+  gem "rubocop", "0.53.0", require: false
 end
