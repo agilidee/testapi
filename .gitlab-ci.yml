@@ -2,7 +2,6 @@ image: ci-rails
 
 variables:
   RBENV_ROOT: /cache/rbenv
-  COVERAGE_CHECK: "false"
 
 before_script:
   - source rails-setup
