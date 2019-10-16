@@ -35,7 +35,7 @@ describe Testapi::FactoriesController, type: :controller do
     it "should return error on invalid factory" do
       post :create, params: {factory: "abc"}
       expect(response.status).to eq 422
-      expect(json_response).to eq("error" => "Factory not registered: abc")
+      expect(json_response).to eq("error" => "Factory not registered: \"abc\"")
     end
   end # describe "#create"
 end
